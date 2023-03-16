@@ -50,4 +50,7 @@ if write == True:
         j.write(response.choices[0].text)
         j.close()
         a=a+1
+        st.markdown("___")
         st.write(response.choices[0].text)
+        st.markdown("___")
+        st.balloons()
