@@ -56,13 +56,13 @@ if write == True:
         st.markdown("___")
         st.balloons()
 
-        import pandas as pd
-        df = pd.DataFrame()
-        df['Title_of_the_book']=Title_of_the_book
-        df['Description'] = [What_is_the_book_about]
-        df['Genre'] = [Genre]
-        df['Lead_Characters'] = [Lead_Characters]
-        df['Plot_of_the_book'] = [Plot_of_the_book]
-        df['Chapter'] = [sus]
-        df.to_csv('book.csv', index=False)
-        st.dataframe(df)
+        # import pandas as pd
+        # df = pd.DataFrame()
+        # df['Title_of_the_book']=Title_of_the_book
+        # df['Description'] = [What_is_the_book_about]
+        # df['Genre'] = [Genre]
+        # df['Lead_Characters'] = [Lead_Characters]
+        # df['Plot_of_the_book'] = [Plot_of_the_book]
+        # df['Chapter'] = [sus]
+        # df.to_csv('book.csv', index=False)
+        # st.dataframe(df)
