@@ -29,7 +29,7 @@ write = st.button("Generate Chapter")
 
 
 a=0
-while a<=1:
+while a<=0:
     import openai
     openai.api_key = st.secrets['open_api']
     response = openai.Completion.create(
