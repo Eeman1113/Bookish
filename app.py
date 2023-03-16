@@ -34,7 +34,7 @@ if write == True:
         import openai
         openai.api_key = st.secrets['open_api']
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="text-curie-001",#"text-davinci-003",
             prompt="generate a 2000-word book chapter of the "+Genre+" genre based on the following book description: \nTitle of the book: "+Title_of_the_book+"\nWhat is the book about: "+What_is_the_book_about+"\nWhat is the chapter about: "+What_is_the_chapter_about+"\nLead Characters: "+Lead_Characters+"\nPlot of the book: "+Plot_of_the_book,
             temperature=0.7,
             max_tokens=1000,     
