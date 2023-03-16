@@ -18,11 +18,11 @@ Gone are the days of writer's block and endless hours of staring at a blank page
 
 So why waste time struggling to write when you can let **Bookish_** do the heavy lifting for you? Try **Bookish_** today and unleash your inner writing genius! 🚀📚""")
 Title_of_the_book = st.text_input("Title of the book")
-What_is_the_book_about = st.text_input("What is the book about")
-What_is_the_chapter_about = st.text_input("What is the chapter about")
+What_is_the_book_about = st.text_input("What is the book about (optional)")
+What_is_the_chapter_about = st.text_input("What is the chapter about (optional)")
 Genre = st.text_input("Genre")
-Lead_Characters = st.text_input("Lead Characters")
-Plot_of_the_book = st.text_input("Plot of the book")
+Lead_Characters = st.text_input("Lead Characters (optional)")
+Plot_of_the_book = st.text_input("Plot of the book (optional)")
 How_many_chapters=st.slider("How many chapters do you want to generate?", 1,10,1)
 
 write = st.button("Generate Chapter")
