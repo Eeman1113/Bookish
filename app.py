@@ -29,24 +29,25 @@ write = st.button("Generate Chapter")
 
 
 a=0
-while a<=0:
-    import openai
-    openai.api_key = st.secrets['open_api']
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt="generate a 2000-word book chapter of the "+Genre+" genre based on the following book description: \nTitle of the book: "+Title_of_the_book+"\nWhat is the book about: "+What_is_the_book_about+"\nWhat is the chapter about: "+What_is_the_chapter_about+"\nLead Characters: "+Lead_Characters+"\nPlot of the book: "+Plot_of_the_book,
-        temperature=0.7,
-        max_tokens=1000,     
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
-    )#model
-    b=response
-    print("\n")
-    print(response.choices[0].text)#output
-    sus=response.choices[0].text
-    j=open("book.txt",'a')
-    j.write(response.choices[0].text)
-    j.close()
-    a=a+1
-    st.write(response.choices[0].text)
+if write == True:
+    while a<=0:
+        import openai
+        openai.api_key = st.secrets['open_api']
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt="generate a 2000-word book chapter of the "+Genre+" genre based on the following book description: \nTitle of the book: "+Title_of_the_book+"\nWhat is the book about: "+What_is_the_book_about+"\nWhat is the chapter about: "+What_is_the_chapter_about+"\nLead Characters: "+Lead_Characters+"\nPlot of the book: "+Plot_of_the_book,
+            temperature=0.7,
+            max_tokens=1000,     
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
+        )#model
+        b=response
+        print("\n")
+        print(response.choices[0].text)#output
+        sus=response.choices[0].text
+        j=open("book.txt",'a')
+        j.write(response.choices[0].text)
+        j.close()
+        a=a+1
+        st.write(response.choices[0].text)
